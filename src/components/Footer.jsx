@@ -2,10 +2,13 @@ import React from 'react'
 import { AiFillTwitterCircle } from 'react-icons/ai'
 import { FaFacebook, FaInstagram, FaLinkedinIn } from 'react-icons/fa'
 
-const Footer = () => {
+const Footer = ({dark}) => {
   return (
-    <div className='w-[100%] h-[50vh] border absolute bottom-[0px] flex justify-center'> 
-        <div className='border w-[30%] h-[90%] flex flex-col items-center justify-center'>
+    <div  style={{
+                color: dark ? "white" : "black",
+                backgroundColor: dark ? "black" : "white",
+              }} className='border w-[100%] h-[50vh]  relative  flex justify-center rounded-t-[70px] mt-[1000px] '> 
+        <div className=' w-[30%] h-[90%] flex flex-col items-center justify-center'>
            <div className='w-[80%] mb-[40px]'><img src="https://th.bing.com/th/id/OIP.zgqxAymMmtbUFaxrM6fQ1wHaDl?w=338&h=169&c=7&r=0&o=7&pid=1.7&rm=3" alt="" className='w-[200px] ' /> </div> 
             <p className='w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut sapiente blanditiis illo quas ab quod fuga?</p>
             <div className=' w-[80%] flex justify-between mt-[30px]'>
@@ -16,7 +19,7 @@ const Footer = () => {
             </div>
         </div>
 
-        <div className='border w-[20%] h-[90%] flex flex-col justify-center '>
+        <div className=' w-[20%] h-[90%] flex flex-col justify-center pb-[80px]'>
             <h6 className='text-[20px] mb-[30px] text-blue-900'>Quick Links</h6>
 
             <ul>
@@ -29,8 +32,8 @@ const Footer = () => {
         </div>
 
 
-        <div className='border w-[20%] h-[90%]'>
-            <h6>Services</h6>
+        <div className=' w-[20%] h-[90%] flex flex-col justify-center pb-[80px]'>
+            <h6 className='text-[20px] mb-[30px] text-blue-900'>Services</h6>
 
             <ul>
                 <li>Web Design</li>
@@ -40,8 +43,8 @@ const Footer = () => {
             </ul>
         </div>
 
-        <div className='border w-[20%] h-[90%]'>
-            <h6>Help & Support</h6>
+        <div className=' w-[20%] h-[90%] flex flex-col justify-center pb-[80px]'>
+            <h6 className='text-[20px] mb-[30px] text-blue-900'>Help & Support</h6>
 
             <ul>
                 <li>Support Center</li>

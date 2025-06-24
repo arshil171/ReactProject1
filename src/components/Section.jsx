@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { FaMoon, FaSun } from "react-icons/fa";
 
-const Section = () => {
+const Section = ({ dark }) => {
   const [data, setData] = useState(null);
   const [count, setCount] = useState(0);
-  const [dark, setDark] = useState(false);
 
   async function getData() {
     try {
@@ -21,21 +20,21 @@ const Section = () => {
     getData();
   }, [count]);
   return (
-    <div className="flex flex-wrap w-[100%] h-[100vh]  justify-center  mt-[30px]">
+    <div className="flex flex-wrap w-[100%] h-[1000px]  justify-center  mt-[30px] boredr">
       {data &&
         data.map((item) => {
           return (
             <div
               style={{
-                color: dark ? "black" : "white",
-                backgroundColor: dark ? "white" : "black",
+                color: dark ? "white" : "black",
+                backgroundColor: dark ? "black" : "white",
               }}
             >
               <div
                 style={{
-                color: dark ? "black" : "white",
-                backgroundColor: dark ? "white" : "black",
-              }}
+                  color: dark ? "white" : "black",
+                  backgroundColor: dark ? "black" : "white",
+                }}
                 key={item.id}
                 className=" bg-black text-white border rounded-[10px] h-[450px]  w-[290px] mr-[15px] mb-[20px] mt-[20px] flex flex-col items-center justify-center"
               >
@@ -46,7 +45,7 @@ const Section = () => {
                   src={item.image}
                   alt=""
                   width={"100px"}
-                  className="w-[200px] h-[200px] border "
+                  className="w-[200px] h-[200px] "
                 />
                 <p>Price : ${item.price}</p>
                 <p>Rating : {item.rating.rate}</p>

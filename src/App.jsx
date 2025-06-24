@@ -6,12 +6,12 @@ import Footer from './components/Footer';
 const App = () => {
    const [dark , setDark] = useState(false)
   return(
-    <div>
-      {/* <Navbar dark={dark} setDark={setDark} /> */}
-    {/* <Section dark={dark} setDark={setDark}/> */}
-    <Footer />
+    <>
+      <Navbar dark={dark} setDark={setDark} />
+    <Section dark={dark} setDark={setDark}/>
+    <Footer dark={dark} />
    
-    </div>
+    </>
   )
 }
 
